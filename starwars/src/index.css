@@ -66,5 +66,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 1.8rem;
+  background-attachment: fixed;
 }
 
