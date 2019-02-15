@@ -23,7 +23,7 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({ next: data.next, previous: data.previous, starwarsChars: data.results });
       })
       .catch(err => {
         throw new Error(err);
@@ -31,11 +31,13 @@ class App extends Component {
   };
 
   render() {
-    const { starwarsChars } = this.state;
+    const { starwarsChars, previous, next } = this.state;
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
         <CharacterList characters={starwarsChars} />
+        <button onClick={() => this.getCharacters(previous)} disabled={previous === null}>Previous</button>
+        <button onClick={() => this.getCharacters(next)} disabled={next === null}>Next</button>
       </div>
     );
   }
