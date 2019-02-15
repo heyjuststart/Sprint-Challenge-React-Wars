@@ -3,6 +3,6 @@ import Character from './Character';
 
 export default (props) => (
   <div className="character-list">
-    { props.characters.map(c => <Character key={c.id} character={c} />) }
+    { props.characters.map((c, i) => <Character key={i} character={c} />) }
   </div>
 );

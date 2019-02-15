@@ -1,5 +1,6 @@
 import React from 'react';
 
-export default (props) => (
-  <div className="character">{ props.name }</div>
-);
+export default (props) => {
+  const { character } = props;
+  return <div className="character">{ character.name }</div>;
+};
