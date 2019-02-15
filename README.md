@@ -25,12 +25,31 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+React JS is a frontend javascript framework that tries to solve the complexities involved with imperative programming
+with larger, more complex applications. React is declarative, you adjust state and each component is responsible for
+updating itself based on that state. Programming this way lets developers easily track the changes to state which are
+responsible for an effect they might be observing. With imperative programming, each state change you may implement will
+also need to take into consideration every component change that also needs to occur. As applications get larger, the
+cognitive effort required to make imperative changes grows as each developer will need to know and potentially change
+every behavior connected to a certain value.
 
 - [ ] What does it mean to _think_ in react?
+As you approach a proposed design, try to isolate what you see into react components you may need to make to
+implement that design.
+
+- [ ] Briefly describe some of the differences between a Class/Stateful component and a Functional/Presentational component.
+A class component might implement its own state and state updates. A functional component is just a function that
+accepts a props object and returns a representation of those props in jsx. Class components can be heavier
+performance-wise when react goes to diff the virtual dom to decide which components need to be re-rendered.
 
 - [ ] Describe state.
+State is an object inside a class component that holds the currently rendered state of an instance of that class. React
+watches this state for changes. Depending on your control flow/lifecycle logic, react will run a class's render method
+when state changes.
 
 - [ ] Describe props.
+Props are a convention in react to describe an object you pass from parent components to child components. This object
+is often used to pass pieces of state down to children.
 
 ## Project Set Up
 
